@@ -1,0 +1,3 @@
+[submodule "I2S"]
+	path = I2S
+	url = https://github.com/biemster/pico-I2S.git
