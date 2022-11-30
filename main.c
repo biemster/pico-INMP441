@@ -1,9 +1,11 @@
+#include <stdio.h>
 #include "pico/stdlib.h"
 
-#include "hardware/pio.h"
 #include "i2s.h"
 
 int main() {
+	stdio_init_all();
+
 	I2S_init(INPUT);
 	I2S_setDATA(29);
 	I2S_setBCLK(3); // LRCLK = +1
