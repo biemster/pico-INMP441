@@ -3,7 +3,16 @@
 #include "i2s.h"
 
 int main() {
+	I2S_init(INPUT);
+	I2S_setDATA(29);
+	I2S_setBCLK(3); // LRCLK = +1
+	I2S_setBitsPerSample(24);
+	I2S_begin(16000);
+	int32_t l, r, sample;
 
-    while(1) {
-    }
+	while(1) {
+		I2S_read32(&l, &r);
+		sample = l ? l : r;
+		printf("%.6x\n", sample);
+	}
 }
