@@ -6,7 +6,7 @@ set(target_name pico-INMP441)
 
 pico_sdk_init()
 
-add_subdirectory(pico-I2S)
+add_subdirectory(I2S)
 
 add_executable(${target_name})
 
